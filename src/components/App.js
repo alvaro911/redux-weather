@@ -42,6 +42,9 @@ class App extends Component {
         </form>
         <div>
           <h1>{this.props.cityName}</h1>
+          <h2>{this.props.temp}</h2>
+          <img src={this.props.icon} alt="weather icon" />
+          <h3>{this.props.weatherCon}</h3>
         </div>
       </div>
     );

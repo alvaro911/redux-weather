@@ -18,10 +18,10 @@ export default (state = initialState, action) => {
     case 'CITY_FOUND':
       return {
         ...state,
-        cityName: action.cityName,
-        weatherCon: action.weatherCon,
-        temp: action.temp,
-        icon: action.icon,
+        cityName: action.payload.name,
+        weatherCon: action.payload.weather[0].description,
+        temp: action.payload.main.temp,
+        icon: action.payload.weather[0].icon,
       };
     default:
       return state;
